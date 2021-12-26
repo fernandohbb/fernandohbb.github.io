@@ -1,60 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html>
     <head>
-         <title>Logica de Programacao Javascript</title>
-         <meta charset="utf-8">
-
-
-    <head/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Fernando Bastos</title>
+        <style type="text/css">
+            body {
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
+                font-size: 26pt;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                background-color: blueviolet;
+            }
+            .button {
+                background-color: #1f1f1f;
+                border: none;
+                border-radius: 4px;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
     <body>
-        <h1>Logica de programacao com Javascript</h1>
+
+        <div>
+            <h2>Programador Fernando Bastos</h2>
+            <span id="emailParcial">fernando.henriquebb</span>
+        </div>
+
+        <button class="button" onclick="revelarEmail('@gmail.com')">
+            revelar email completo
+        </button>
 
         <script>
-      //  var nome =  prompt("Qual seu nome?");
-      //      alert("bem-vindo, " + nome);
-        
-        
-        //var cidade =  prompt("entao "+ nome + ",e qual sua cidade");
-        // alert("ja estive em" + cidade);
-
-        
-        var peso =   prompt(" qual seu peso");
-        var pesoemgramas = peso * 1000;
-          alert("legal,tenho"   + peso + "  tambem");
-          alert("voce sabia que isso da "   + pesoemgramas + "  em gramas");
-
-        var base = prompt(" qual e a base de um quadrado");
-        var altura =prompt("qual e a altura de um quadrado")
-        var areadeumquadrado = base * altura;
-        alert("sabia que um quadrado tem" +areadeumquadrado +"  em area ");
-
-      var gasolina = prompt("preco da gasolina");
-      var litros = prompt("quantidade em litros");
-      var valoremdinheiro = gasolina * litros;
-      alert("sabia que o valor da gasolina e  "  + valoremdinheiro +  " em dinheiro ");
-
-      var litro = prompt(" preco do litro")
-      var dinheiro = prompt( "valor em dinheiro");
-      var quantidadeemlitro =  dinheiro / litro;
-      alert ("sabia que da " + quantidadeemlitro + "em litros");
-
-
-      var fruta = prompt(" nome da fruta");
-      var quantidade = prompt(" quantidade" );
-      var pessoas = prompt("  pesssoas");
-      var cada =  quantidade / pessoas;
-      alert("voce sabia que vai da " + cada + " para cada  ");
-
-
-      
-      
-
-                
-
-    
-
-        </script>   
-
-        
+            function revelarEmail(finalEmail) {
+                var comecoEmail = document.getElementById("emailParcial").innerText;
+                var emailCompleto = comecoEmail + finalEmail;
+                document.getElementById("emailParcial").innerText = emailCompleto;
+            }
+        </script>
     </body>
-</html>          
+</html>
