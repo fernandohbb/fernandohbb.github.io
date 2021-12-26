@@ -41,10 +41,15 @@
         </button>
 
         <script>
+            var revelouEmail = false;   
             function revelarEmail(finalEmail) {
                 var comecoEmail = document.getElementById("emailParcial").innerText;
                 var emailCompleto = comecoEmail + finalEmail;
-                document.getElementById("emailParcial").innerText = emailCompleto;
+               
+                if(!revelouEmail){
+                    document.getElementById("emailParcial").innerText = emailCompleto;
+                    revelouEmail = true;
+                }
             }
         </script>
     </body>
