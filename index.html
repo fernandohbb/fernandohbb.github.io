@@ -1,56 +1,47 @@
-<!DOCTYPE html>
-
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Fernando Bastos</title>
-        <style type="text/css">
-            body {
-                font-family: 'Courier New', Courier, monospace;
-                font-weight: bold;
-                font-size: 26pt;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                background-color: blueviolet;
-            }
-            .button {
-                background-color: #1f1f1f;
-                border: none;
-                border-radius: 4px;
-                color: white;
-                padding: 15px 32px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-                margin: 4px 2px;
-                cursor: pointer;
-            }
-        </style>
+         <title>Logica de Programacao Javascript</title>
+         <meta charset="utf-8">
     </head>
     <body>
+        <textarea id = "dividir"></textarea>
+        <button onclick="dividirTexto()">dividir texto</button> 
+<script> 
 
-        <div>
-            <h2>Programador Fernando Bastos</h2>
-            <span id="emailParcial">fernando.henriquebb</span>
-        </div>
+        var slides = [];
+        var textoUsuario = `13E, tendo passado ali aquela noite, separou do que tinha um presente para seu irmão Esaú: 14duzentas cabras e vinte bodes; duzentas ovelhas e vinte carneiros; 15trinta camelas de leite com suas crias, quarenta vacas e dez touros; vinte jumentas e dez jumentinhos. 16Entregou-os às mãos dos seus servos, cada rebanho à parte, e disse aos servos: Passai adiante de mim e deixai espaço entre rebanho e rebanho. 17Ordenou ao primeiro, dizendo: Quando Esaú, meu irmão, te encontrar e te perguntar: De quem és, para onde vais, de quem são estes diante de ti? 18Responderás: São de teu servo Jacó; é presente que ele envia a meu senhor Esaú; e eis que ele mesmo vem vindo atrás de nós. 19Ordenou também ao segundo, ao terceiro e a todos os que vinham conduzindo os rebanhos: Falareis desta maneira a Esaú, quando vos encontrardes com ele. 20Direis assim: Eis que o teu servo Jacó vem vindo atrás de nós. Porque dizia consigo mesmo: Eu o aplacarei com o presente que me antecede, depois o verei; porventura me aceitará a presença. 21Assim, passou o presente para diante dele; ele, porém, ficou aquela noite no acampamento.`;
+        while (textoUsuario.length > 0) {
+        var textoSlide = textoUsuario.substring(0,385);
+        var ultimaLinha = textoSlide.substring(330); 
+    
+        var indicePontoTextoUsuario = 330 + ultimaLinha.indexOf('.');
+        if(ultimaLinha.indexOf('.')===-1){
+          indicePontoTextoUsuario = 330 + ultimaLinha.indexOf('?') ;
+        }
+        if(ultimaLinha.indexOf('.')=== -1 && ultimaLinha.indexOf('?')=== -1){
+          indicePontoTextoUsuario = 330 + ultimaLinha.indexOf('!') ;
+        }
+        if(ultimaLinha.indexOf('.')=== -1 && ultimaLinha.indexOf('?')=== -1 && ultimaLinha.indexOf('!')=== -1){
+          indicePontoTextoUsuario = 330 + ultimaLinha.indexOf(':') ;
+        }
+        if(ultimaLinha.indexOf('.')=== -1 && ultimaLinha.indexOf('?')=== -1 && ultimaLinha.indexOf('!')=== -1 && ultimaLinha.indexOf(':')=== -1){
+           indicePontoTextoUsuario = 330 + ultimaLinha.indexOf(';') ;
+        }
+        if(ultimaLinha.indexOf('.')=== -1 && ultimaLinha.indexOf('?')=== -1 && ultimaLinha.indexOf('!')=== -1 && ultimaLinha.indexOf(':')=== -1 && ultimaLinha.indexOf(';')=== -1){
+          indicePontoTextoUsuario = 330 + ultimaLinha.indexOf(',');
+        }
+        if(ultimaLinha.indexOf('.')=== -1 && ultimaLinha.indexOf('?')=== -1 && ultimaLinha.indexOf('!')=== -1 && ultimaLinha.indexOf(':')=== -1 && ultimaLinha.indexOf(';')=== -1 && ultimaLinha.indexOf(',')=== -1){
+          indicePontoTextoUsuario = 330 + ultimaLinha.indexOf(' ');
+        }
+        console.log({ultimaLinha})
+        textoSlide = textoUsuario.substring(0,indicePontoTextoUsuario +1);
+        textoUsuario = textoUsuario.substring(indicePontoTextoUsuario + 1);
+        slides.push(textoSlide);
+        }
+        slides.forEach(texto => console.log(texto));
 
-        <button class="button" onclick="revelarEmail('@gmail.com')">
-            revelar email completo
-        </button>
-
-        <script>
-            var revelouEmail = false;   
-            function revelarEmail(finalEmail) {
-                var comecoEmail = document.getElementById("emailParcial").innerText;
-                var emailCompleto = comecoEmail + finalEmail;
-               
-                if(!revelouEmail){
-                    document.getElementById("emailParcial").innerText = emailCompleto;
-                    revelouEmail = true;
-                }
-            }
-        </script>
+            
+     
+</script>       
     </body>
-</html>
+</html>  
