@@ -1,0 +1,139 @@
+<html>
+    <head>
+         <title>Calculo de leite</title>
+         <meta charset="utf-8">
+         <style>
+             body{
+                 background-color:aliceblue;
+             }
+             
+             .contanier{
+                 color:black;
+                 background-color: blue;
+                 position: absolute;
+                 top:40%;
+                 left:40%;
+                 transform:translate(-40%,-40%);
+                 padding: 70px;
+                 margin-top: 30%;
+
+                 
+
+
+             }
+             spam{
+                 color:red;
+             }
+             input{
+                 background-color: rgb(7, 6, 6);
+                 color: rgb(208, 255, 0);
+             }
+             h4{
+                 margin-top: auto;
+                 color:black;
+                 padding-left: 50px;    
+             }
+             .spamh4{
+                 color:white;
+             }
+             button{
+                 background-color: darkblue;
+                 color:black;
+                 padding: 5px;
+             }
+             #vacasAbaixoDaMedia{
+                 color:yellow;
+                 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                 background-color: black;
+                 padding: 30px;
+                 max-width: 200px;
+                 height: 500px;
+                 margin-top: -10px;
+             }
+             #vacasAcimaDaMedia{
+                color:yellow;
+                 background-color: black;
+                 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                 padding: 30px;
+                 max-width: 200px;
+                 height: 500px;
+                 margin-top: -10px;
+                
+             }
+             h3{
+                 color:red;
+                 height: 40px;
+             }
+             #result{
+                 background-color: black;
+                 padding: 20px;
+                 color:red;
+                 height: 10px;
+                 margin-bottom: 10px;
+                 margin-top: 30px;
+             }
+             
+             
+         </style>
+    </head>
+    <body>
+        <h3>Vacas Abaixo/Media</h3>
+        <div id="vacasAbaixoDaMedia"></div> 
+        <h3>Vacas Acima/Media</h3>
+        <div id="vacasAcimaDaMedia"></div>
+        <div class="contanier">
+        <h4>Media/<spam class="spamh4">Leite</spam></h4>
+        <input tyepe="text" id="nomeDaVaca"></input>
+        <label>nome(<spam>vaca</spam>)</label>
+        <br><br>
+        <input tyepe="number" id="litrosTiradoCedo"></input>
+        <label>Litros(<spam>cedo</spam>)</label>                        
+        <br><br>
+        <input tyepe="number" id="litrosTiradoTarde"></input>
+        <label>Litros(<spam>tarde</spam>)</label>
+        <br><br>
+        <button onclick="adicionarMediaVaca()">Calcular</button>
+        <div id="result"></div>                     
+        <script> 
+
+            var arrDeVacasAbaixo = [];
+            var arrDeVacasAcima = [];
+            
+            function adicionarMediaVaca(){
+            var nomeVaca = document.querySelector("#nomeDaVaca").value;
+            var litrosCedo = document.querySelector("#litrosTiradoCedo").value ;
+            var litrosTarde = document.querySelector("#litrosTiradoTarde").value ;
+
+            litrosCedo = parseFloat(litrosCedo);
+            litrosTarde = parseFloat(litrosTarde);
+
+            var totalLitrosDoDia = (litrosCedo + litrosTarde);
+            var resultado = totalLitrosDoDia/2
+            var mediaDeLeite = 10;
+
+            var arrTotalLitrosVacas = [];
+            arrTotalLitrosVacas.push(totalLitrosDoDia)
+            var soma = 0;
+            
+            for(var i = 0;i < arrTotalLitrosVacas.length; i++){
+                    soma += arrTotalLitrosVacas[i]    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+            }
+            document.querySelector("#result").innerHTML = "total de litros é " +  soma
+
+                if(resultado < mediaDeLeite){
+                    arrDeVacasAbaixo.push("<p>Nome da vaca: " + nomeVaca,"<p>Litros tirado cedo: " + litrosCedo,"<p>Litros tirado a tarde: " + litrosTarde)
+                     document.querySelector("#vacasAbaixoDaMedia").innerHTML = arrDeVacasAbaixo;
+
+                }else{
+                    arrDeVacasAcima.push("<p>Nome da vaca: " + nomeVaca,"<p>Litros tirado cedo: " + litrosCedo,"<p>Litros tirado a tarde: " + litrosTarde)
+                    document.querySelector("#vacasAcimaDaMedia").innerHTML = arrDeVacasAcima
+
+                }         
+                }
+
+    
+        
+    </script> 
+    </body>
+</html>   
