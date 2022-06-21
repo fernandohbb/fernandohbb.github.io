@@ -1,0 +1,154 @@
+<html>
+    <head>
+         <title>Calculo de leite</title>
+         <meta charset="utf-8">
+         <style>
+             body{
+                 background-color:aliceblue;
+             }
+             
+             .contanier{
+                 color:black;
+                 background-color: blue;
+                 position: absolute;
+                 top:40%;
+                 left:40%;
+                 transform:translate(-35%,-35%);
+                 padding: 50px;
+                 margin-top: -10%;
+                 width: 50%;
+             }
+             spam{
+                 color:red;
+             }
+             input{
+                 background-color: rgb(7, 6, 6);
+                 color: rgb(208, 255, 0);
+             }
+             h4{
+                 margin-top: auto;
+                 color:black;
+                 padding-left: 50px;    
+             }
+             .spamh4{
+                 color:white;
+             }
+             button{
+                 background-color: darkblue;
+                 color:black;
+                 padding: 5px;
+             }
+             h3{
+                 color:red;
+                 height: 40px;
+             }
+             #mytab{
+                 width:50%;
+                 text-align: center;
+                 
+    
+                 
+             }
+             .box{
+            width:40%;
+            text-align: center;
+            transform:translate(40%,45%);
+            height: 110%;
+
+
+        }
+             
+             
+             
+         </style>
+    </head>
+    <body>
+        <div class="contanier">
+        <h4>Media/<spam class="spamh4">Leite</spam></h4>
+        <input tyepe="text" id="nomeDaVaca"></input>
+        <label>nome(<spam>vaca</spam>)</label>
+        <br><br>
+        <input tyepe="number" id="litrosTiradoCedo"></input>
+        <label>Litros(<spam>cedo</spam>)</label>                        
+        <br><br>
+        <input tyepe="number" id="litrosTiradoTarde"></input>
+        <label>Litros(<spam>tarde</spam>)</label>
+        <br><br>
+        <button onclick="adicionar()">Adicionar</button>
+        </div>
+        <div class="box">
+        <table border="2" id="mytab">
+            <thead>
+             <th>Vaca</th>
+            <th>Litros/Cedo</th>
+            <th>litros/Tarde</th>
+            <th>Total/Litros</th>
+            <th>Media/Litros</th>
+            <th>Total/Litros/Vacas</th>
+            <th>Vacas/Abaixo/Media</th>
+            <th>Vacas/Acima/Media</th>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+</table>  
+</div>                               
+        <script> 
+            var arrDadosVacas = [];
+            var arrDeVacasAbaixo = [];
+            var arrDeVacasAcima = [];
+            var arrTotalLitrosVacas = [];
+            
+
+            
+            function adicionar(){
+            var nomeVaca = document.querySelector("#nomeDaVaca").value;
+            var litrosCedo = document.querySelector("#litrosTiradoCedo").value ;
+            var litrosTarde = document.querySelector("#litrosTiradoTarde").value ;
+
+            litrosCedo = parseFloat(litrosCedo);
+            litrosTarde = parseFloat(litrosTarde);
+
+            var totalLitrosDoDia = (litrosCedo + litrosTarde);
+            var mediaLitrosDoDia = totalLitrosDoDia/2
+            var mediaDeLeite = 10;
+
+            arrTotalLitrosVacas.push(totalLitrosDoDia)
+            var soma = 0;
+                                          
+            
+            for(var i = 0;i < arrTotalLitrosVacas.length; i++){
+                    soma += arrTotalLitrosVacas[i]                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+            }
+
+
+                if(mediaLitrosDoDia < mediaDeLeite){
+                    arrDeVacasAbaixo.push(nomeVaca)                  
+                }else{
+                    arrDeVacasAcima.push(nomeVaca)
+                }   
+                
+                arrDadosVacas.push(nomeVaca,litrosCedo,litrosTarde,TotalLitrosDoDia,mediaLitrosDoDia,soma,arrDeVacasAbaixo,arrDeVacasAcima)
+                var tbody= document.querySelector("#tbody");
+
+                for(var i = 0; i < arrDadosVacas.length;i++){
+                var tr =tbody.insertRow();
+     
+                var tdVaca= tr.insertCell();
+                var tdLitrosC= tr.insertCell();
+                var tdLitrosT = tr.insertCell();
+
+                tdVacainnerHTML  = arrDadosVacas[i].nomeVaca
+                tdLitrosC.innerHTML  = arrDadosVacas[i].litrosCedo
+                tdLitrosT.innerHTML  = arrDadosVacas[i].litrosTarde
+
+}
+  }
+
+
+    
+        
+    </script> 
+    </body>
+</html>   
