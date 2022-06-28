@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+    <head>
+         <title></title>
+         <meta charset="utf-8">
+    </head>
+    <style>
+        table:hover{
+            background-color: rgb(121, 121, 163);
+        }
+    </style>
+    <body>
+    <input id="inputNome"></input>
+    <button onclick="copiar()">Copiar</button> 
+    <table border="1" id="mytab">
+        <thead>
+                 <th class="quantidade">qnt</th>
+                 <th id="textoDividido">Texto Dividido</th>
+                 <th id="thBotao">Copiar</th>
+        </thead>
+             <tbody id="tbody">
+               
+
+            </tr>
+             </tbody>
+         </table>
+   <script>
+
+       var arrNomes = ["a","b","c","d","e"]
+       function copiarTextoDividido (idDoTd){
+           var td = document.querySelector("#" + idDoTd)
+
+           navigator.clipboard.writeText(td);
+           console.log(td)
+       }
+for(var i = 0;  i < arrNomes.length; i++){
+
+       var tbody = document.querySelector("#tbody")
+            var tr =  document.createElement("tr");
+             tr = tbody.insertRow();
+
+        
+       var tdQnt = tr.insertCell();
+       var tdTexto = tr.insertCell();
+       var tdBotaoCopiar = tr.insertCell();
+
+       tdQnt.innerHTML = i + 1;
+       tdBotaoCopiar.innerHTML =  "<button id=\"btnCopiarTexto\" onClick=\"copiarTextoDividido()\">Copiar</button>";
+       tdTexto.id = "tdDividido" + (i +1) 
+       tdTexto.innerHTML = arrNomes[i];
+       console.log(tdTexto)
+
+}
+</script>        
+</body>
+</html> 
+
