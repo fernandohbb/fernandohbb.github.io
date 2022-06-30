@@ -1,0 +1,343 @@
+<html>
+    <head>      
+      <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+         <title>Logica de Programacao Javascript</title>
+         <meta charset="utf-8">
+         <style>
+           body{
+             width: 100%;margin: 0 auto;min-width: 6;
+          font-family: 'helvatica' , sans-serif;
+           }
+           .titulo{
+               top: 50%;
+               left: 50%;
+               width: 100%;
+               text-align: center;
+               color:white;
+               background-color: #1f1c32;
+               padding: px;
+           }
+           .titulo spam{
+            font-size: 2.3vw;
+            margin-top: 20px;
+            font-weight: 800;
+            text-shadow: -0.08em 0.3em 0.12em rgba(0,0,0,0.9);
+           }
+           .divtext{
+               border-style: ridge;
+               border-radius: 5px;
+               border-color: black;
+           }
+           .subtitulo{
+               color:rgba(178, 236, 16, 0.877);
+           }
+           footer {
+              text-align: center;
+              padding: 15px;
+              background-color: #1f1c32;
+              color: white;
+}
+           .contanier{           
+            background-color: white;
+            width: 500px;
+            align-items: center;  
+            margin: 30px;    
+           }
+           textarea{
+             background-color: rgba(239, 239, 247, 0.705);
+             color:black;
+             width: 800px;
+             height: 250px;
+            top: 50%;
+             margin: 5px;
+             margin-top: 50px;
+             margin-left: 250px;
+             display:flex;
+             box-shadow: 0 0 1px #1f1c32;    
+             border: none;      
+             outline: none;
+             resize: none;                  
+           }
+           textarea:hover{
+             -moz-box-shadow : 0px 0px 10px 1px #EBF6FF;
+             -webkit-box-shadow: 0px 0px 10px 1px #EBF6FF;
+             box-shadow: 0px 0px 5px 1px  #EBF6FF;
+             border: 1px solid #29445a;
+           }
+           textarea::-webkit-scrollbar{
+             width: 5px;
+           }
+          textarea:focus{
+            -moz-box-shadow : 0px 0px 5px 1px #EBF6FF;
+            -webkit-box-shadow: 0px 0px 10px 1px #EBF6FF;
+             box-shadow: 0px 0px 5px 1px  #EBF6FF;
+             border: 2px solid rgb(97, 109, 104);
+          }          
+           textarea::-webkit-scrollbar-thumb  {
+             background-color: #0bbFF9;
+           }
+           .comentario{
+             color:#0e0b27;
+             padding: 2px;
+             box-shadow: 0 0 5px rgb(224, 215, 215);
+             width: 30% ;
+             font-size: 18px;
+             margin-top: 18px;
+           }
+           .referencia{
+            color:#0e0b27;
+            box-shadow: 0 0 8px #aaa;
+            margin: 22px;
+            position: relative;
+            font-size: 18px;
+            margin-left:-33px;
+            width: 20% ;
+           }
+           fieldset{
+             background-color:white;
+             box-shadow:white;
+           }
+           li h5,h6{
+             background-color: rgb(160, 160, 231);
+             padding: 2px solid;
+             border: 3px;
+             display: block;
+             font-size: 10px;
+           }
+           a:hover{
+            color: rgba(40, 199, 74, 0.897);
+           }
+           #mytab{
+             margin-top: -160px;
+             width: 800px;
+             margin-left: 250px;  
+           }
+           .thead{
+               background-color: #110f0f;
+           }
+           #tbody{
+             background-color:rgb(239, 240, 245);
+
+           }
+           #copiarBtn{
+             padding: 80px;
+             width: 100%;
+             background-color: rgb(148, 136, 136);
+             font-family: Verdana, Geneva, Tahoma, sans-serif;
+             margin: 0px;
+           }
+           .ul{
+             background-color: rgb(165, 189, 180);
+             font-size: 12px;
+             margin-left: 80%;
+             width: 100%;
+           }
+           #thBotao{
+             width: 50px;
+             background-color:#1f1c32;
+             color: white;   
+             border-radius: 7px;
+           }
+             #center{
+              width: 5px;
+              background-color: #1f1c32;
+              border-radius: 7px;
+             color: white;
+             text-align: center;
+           }
+           #textoDividido{
+            background-color:  #1f1c32;
+            color:white;
+            font-size: 20px;
+            border-radius: 7px;
+           }
+           #btnDividir{
+            background-color: rgba(10, 26, 109, 0.849);
+             color:#000000;
+             border-radius: 6px;
+             width:50%;
+             font-family:'Times New Roman', Times, serif;
+             padding: 5px;
+             margin-left: 80%;
+             margin-bottom: 30%;
+             margin-top: 0px;
+             font-size: 23px;
+           }
+           #btnDividir:hover{
+            background-color: #1f1c32;
+           }
+           #btnLimparTexto{
+            background-color: rgba(10, 26, 109, 0.849);
+            color:#000000;
+             border-radius: 6px;
+             width: 50%;
+             font-family:'Times New Roman', Times, serif;
+             padding: 5px;
+             font-size: 23px;
+             margin-top: -54%;
+             margin-bottom: 50px;
+             margin-left: 130%
+           }
+          #btnLimparTexto:hover{
+            background-color: #1f1c32;
+          } 
+
+          button{
+              background-color: rgba(10, 26, 109, 0.849);
+              color: white;
+              padding: 6px;
+              border-radius: 8px;
+              font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+          }
+          button:hover{
+              background-color:  #1f1c32;
+          }
+          tr:hover{
+              background-color: #e0d1c0;
+          }
+         
+
+         </style>
+    </head>
+  <body>
+    <div class="titulo">
+        <br><br><br><spam class="divtext">divtext</spam><spam class="subtitulo">.com</spam></spam></br></br></br>
+      </div>
+      <div class="contanier">
+      <div class="ul">
+<fieldset>
+        <h3 class="comentario">divisor de texto online</h3>
+    <ul>
+          <li><h5>passo1: Copie e cole o seu texto para a área em baixo,utilizando as teclas <u style="color:blue"> CTRL + C e CTRL + V</u>, ou começe a escrever.</h5></li>
+          <li><h5>passo2: <u style="color: blue;">Clique</u> no botao abaixo para dividir o texto.</h5></li>
+        <h3 class="referencia">referências online</h3>
+          <li><a href="https://www.bible.com/pt/bible/1608/GEN.1.ARA">Biblia-Sagrada</a></li>
+          <li><a href="https://www.pensador.com/textos/">Texto-Pensador</a></li>
+    </ul>
+ </fieldset>
+    </div>
+        <textarea id = "dividir"></textarea>
+        <br><button id="btnDividir" onclick="dividirTexto()">Dividir</button></br>
+        <br><button id="btnLimparTexto" onclick="limparTexto()">Limpar</button></br>
+    </div>
+ <table  id="mytab">
+ <thead class="thead">
+          <th id="center">texto</th>
+          <th id="textoDividido">Texto Dividido</th>
+          <th id="thBotao">Copiar</th>
+ </thead>
+      <tbody id="tbody">
+        
+      </tbody>
+  </table>
+        </div>
+        
+  <script> 
+
+        function limparTexto(){
+        var limpar = document.querySelector("#dividir")
+        limpar.value = '';
+        }
+
+        function copiarTextoDividido (idDoTd){
+           var td = document.querySelector("#" + idDoTd );
+           console.log(idDoTd,td);
+           navigator.clipboard.writeText(td.innerText);
+        }
+        function dividirTexto(){
+        var slides = [];
+        var textoUsuario = document.querySelector('#dividir').value
+        while (textoUsuario.trim().length > 0) {
+        var textoSlide = textoUsuario.substring(0,385);
+        var ultimaLinha = textoSlide.substring(310);     
+        var indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' 1') ;
+
+        if(ultimaLinha.indexOf(' 1')=== -1){
+          indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' 2') ;
+        }
+        if(ultimaLinha.indexOf(' 1')=== -1 && ultimaLinha.indexOf(' 2')=== -1){
+          indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' 3') ;
+        }
+         if(ultimaLinha.indexOf(' 1')=== -1 && ultimaLinha.indexOf(' 2')=== -1 && ultimaLinha.indexOf(' 3')=== -1  ){
+          indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' 4') ;
+        }
+        if(ultimaLinha.indexOf(' 1')=== -1 && ultimaLinha.indexOf(' 2')=== -1 && ultimaLinha.indexOf(' 3')=== -1 && ultimaLinha.indexOf(' 4')=== -1 ){
+          indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' 5') ;
+        }
+        if(ultimaLinha.indexOf(' 1')=== -1 && ultimaLinha.indexOf(' 2')=== -1 && ultimaLinha.indexOf(' 3')=== -1 && ultimaLinha.indexOf(' 4')=== -1 && ultimaLinha.indexOf(' 5')=== -1){
+          indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' 6') ;
+        }
+        if(ultimaLinha.indexOf(' 1')=== -1 && ultimaLinha.indexOf(' 2')=== -1 && ultimaLinha.indexOf(' 3')=== -1 && ultimaLinha.indexOf(' 4')=== -1 && ultimaLinha.indexOf(' 5')=== -1 &&  ultimaLinha.indexOf(' 6')=== -1  ){
+          indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' 7') ;
+        }
+        if(ultimaLinha.indexOf(' 1')=== -1 && ultimaLinha.indexOf(' 2')=== -1 && ultimaLinha.indexOf(' 3')=== -1 && ultimaLinha.indexOf(' 4')=== -1 && ultimaLinha.indexOf(' 5')=== -1 &&  ultimaLinha.indexOf(' 6')=== -1 && ultimaLinha.indexOf(' 7')=== -1 ){
+          indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' 8') ;
+        }
+        if(ultimaLinha.indexOf(' 1')=== -1 && ultimaLinha.indexOf(' 2')=== -1 && ultimaLinha.indexOf(' 3')=== -1 && ultimaLinha.indexOf(' 4')=== -1 && ultimaLinha.indexOf(' 5')=== -1 &&  ultimaLinha.indexOf(' 6')=== -1 && ultimaLinha.indexOf(' 7')=== -1 && ultimaLinha.indexOf(' 8')=== -1 ){
+          indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' 9') ;
+        }
+        if(ultimaLinha.indexOf(' 1')=== -1 && ultimaLinha.indexOf(' 2')=== -1 && ultimaLinha.indexOf(' 3')=== -1 && ultimaLinha.indexOf(' 4')=== -1 && ultimaLinha.indexOf(' 5')=== -1 &&  ultimaLinha.indexOf(' 6')=== -1 && ultimaLinha.indexOf(' 7')=== -1 && ultimaLinha.indexOf(' 8')=== -1 && ultimaLinha.indexOf(' 9')=== -1 ){
+          indicePontoTextoUsuario = 310 + ultimaLinha.indexOf('. ') ;
+        }          
+        if(ultimaLinha.indexOf('. ')===-1){
+          indicePontoTextoUsuario = 310 + ultimaLinha.indexOf('?') ;
+        }
+        if(ultimaLinha.indexOf('. ')=== -1 && ultimaLinha.indexOf('?')=== -1){
+          indicePontoTextoUsuario = 310 + ultimaLinha.indexOf('!') ;
+        }
+        if(ultimaLinha.indexOf('. ')=== -1 && ultimaLinha.indexOf('?')=== -1 && ultimaLinha.indexOf('!')=== -1){
+          indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(':') ;
+        }
+        if(ultimaLinha.indexOf('. ')=== -1 && ultimaLinha.indexOf('?')=== -1 && ultimaLinha.indexOf('!')=== -1 && ultimaLinha.indexOf(':')=== -1){
+           indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(';') ;
+        }
+        if(ultimaLinha.indexOf('. ')=== -1 && ultimaLinha.indexOf('?')=== -1 && ultimaLinha.indexOf('!')=== -1 && ultimaLinha.indexOf(':')=== -1 && ultimaLinha.indexOf(';')=== -1){
+          indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(',');
+        }
+        if(ultimaLinha.indexOf('. ')=== -1 && ultimaLinha.indexOf('?')=== -1 && ultimaLinha.indexOf('!')=== -1 && ultimaLinha.indexOf(':')=== -1 && ultimaLinha.indexOf(';')=== -1 && ultimaLinha.indexOf(',')=== -1 ){
+          indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' ');
+        }    
+
+        console.log({ultimaLinha})
+        textoSlide = textoUsuario.substring(0,indicePontoTextoUsuario +1);
+        textoUsuario = textoUsuario.substring(indicePontoTextoUsuario +1);
+        slides.push(textoSlide.trim());
+        }
+        slides.forEach(texto => console.log(texto));
+        //slides.forEach(texto => document.write(texto + '<br><br><hr>' ));
+        //Esse é igual o de cima;
+
+        for(let i = 0; i < slides.length; i++){
+            var texto = slides[i];
+
+            var tbody = document.querySelector("#tbody")
+            var tr =  document.createElement("tr");
+            tr = tbody.insertRow();
+
+        
+            var tdQnt = tr.insertCell();
+            var tdTexto = tr.insertCell();
+            var tdBotaoCopiar = tr.insertCell();
+
+            tdQnt.innerHTML = i + 1
+            tdTexto.id = "tdDividido" + (i +1);
+            var btn = document.createElement("button");
+       btn.onclick = function (){ copiarTextoDividido("tdDividido" + (i + 1))};
+       btn.innerText = "copiar";
+        tdBotaoCopiar.appendChild(btn);
+       tdTexto.innerHTML = texto;
+            //tdBotaoCopiar.innerHTML =  "<button id=\"btnCopiarTexto\" onClick=\"copiarTextoDividido()\">Copiar</button>";
+            
+       }
+        //console.log(textoSlide)
+       }
+       dividirTexto();            
+
+</script>       
+       </body>
+       <footer>
+        <p>Programador:Fernando Henrique Borba<br>
+          <a href="https://github.com/fernandohbb">fernandohbb:</a></p>
+      </footer>
+</html>  
