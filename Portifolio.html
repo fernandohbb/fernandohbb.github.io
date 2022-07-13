@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+    <head>
+         <title>Logica de Programacao Javascript</title>
+         <meta charset="utf-8">
+
+
+    </head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:Verdana, Geneva, Tahoma, sans-serif
+        }
+        .logo{
+            background-image: url(../Documents/fernando/notepad-and-laptop-concept.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position:initial;
+            height: 100vh;
+            width: 100%;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 30px;
+            padding-left: 5%;
+            padding-right: 8%;
+        }
+         nav h2{
+            color:white;
+            cursor:pointer;
+            letter-spacing: 8px;
+        }
+        spam{
+            color:red;
+        }
+        nav ul li {
+            display: inline-block;
+            padding: 10px 25px;
+            list-style-type: none;
+        }
+        nav ul li a {
+            color:white;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+        nav ul li a:hover{
+            color:rgb(230, 13, 49);
+            transform: scale(1.2);
+        }
+       
+        .btn {
+  display: inline-block;
+  border-radius: 25px;
+  background-color: red;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 8px;
+  width: 130px;
+  cursor: pointer;
+  margin: 5px;
+  padding-left: 10%;
+  transition: transform .3s;
+}
+.btn:hover{
+    transform: scale(1.2);
+}
+
+.btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn:hover span {
+  padding-right: 25px;
+}
+
+.btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+        
+    </style>
+   
+    <body>
+       <div class="logo">
+           <nav>
+               <h2>Portfó<spam>lio</spam></h2>
+                <ul class="cabecalho-link">
+                    <li><a href="#">início</a></li>
+                    <li><a href="#">Sobre Mim</a></li>
+                    <li><a href="#">Servicos</a></li>
+                    <li><a href="#">Habilidades</a></li>
+                    <li><a href="#">Contato</a></li>
+           </ul>
+           <li><a href="" class="btn" style="vertical-align:middle"><span>Subscribe</span></a></li>
+           </nav>
+       </div>
+        <script> 
+
+      
+        
+</script>   
+
+        
+</body>
+</html>     
