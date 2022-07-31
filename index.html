@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  </head>
+  <style>
+    body{
+      background-color:  #dbdee0;
+    }
+    .parte-1{
+      background-color:  rgb(31, 29, 29);
+      padding: 4px;
+
+    }
+    .parte-1 a{
+      color:white;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .parte-1 .navbar a:hover{
+      background-color:  #ffc107 ;
+      border-radius: 10%;
+      transform: scale(1.2);
+      transition: transform 0.5s;
+    }
+    .dropdown-item{
+      background-color:  rgb(31, 29, 29);
+    }
+    .divtext{
+               border-style: ridge;
+               border-radius: 5px;
+               border-color: black;
+           }
+           .subtitulo{
+               color: #ffc107 ;
+           }
+    .navbar-brand{
+      color: black;
+      padding: 2px;
+      background-color: #ffc107 ;
+      border-radius: 8px;
+    }
+    .navbar-brand:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.3s;
+}
+.navbar-brand:hover {
+  padding-right: 15px;
+}
+.navbar-brand:hover:after {
+  opacity: 1;
+  right: 0;
+}
+      .parte-2{
+              margin-top: -48px;
+               text-align: center;
+               color:white;
+               background-color: #1f1c32;
+               padding: -20px;
+           }
+           .parte-2 spam{
+            font-size: 30px;
+            font-weight: 800;
+            text-shadow: -0.08em 0.3em 0.12em rgba(0,0,0,0.9);
+           }
+           .card{
+             padding: 10px;
+             background-color:  rgb(31, 29, 29);
+           }
+           .card-body{
+             text-align: center;
+             font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+             background-color: #1f1c32;
+             color:rgb(250, 240, 240);
+             list-style-type: none;
+               margin-top: 5px;
+           }
+           .card-body:hover{
+            background-color:  rgb(31, 29, 29);
+            transform: scale(1.1);
+            border-radius: 8px;
+           }
+           .card-title{
+            color: #ffc107 ;
+           }
+           .bolinha{
+             background-color: #000000;
+             padding: 3px;
+             border-radius: 100%;
+           }
+           h5{
+               font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+               font-size: 15px;
+           }
+           .parte-3{
+             padding: 70px;
+           }
+           .parte-4{
+             margin-top: -80px;
+             margin-bottom: -60px;
+           }
+           .row{
+               align-items: center;
+               flex-direction: column;
+           }
+           textarea{
+             background-color: rgba(239, 239, 247, 0.705);
+             color:black;
+             width: 650px;
+             height: 210px;
+             top: 50%;
+             border-radius: 10px;
+             margin: 15px;
+             margin-top: 60px;
+             margin-left: 320px;
+             display:flex;
+             box-shadow: 0 0 1px  rgb(31, 29, 29);   
+             border: none;      
+             outline: none;
+             resize: none;                  
+           }
+           textarea:hover{
+             -moz-box-shadow : 0px 0px 10px 1px #EBF6FF;
+             -webkit-box-shadow: 0px 0px 10px 1px #EBF6FF;
+             box-shadow: 0px 0px 5px 1px  #EBF6FF;
+             border: 1px solid #29445a;
+           }
+           textarea::-webkit-scrollbar{
+             width: 5px;
+           }
+          textarea:focus{
+            -moz-box-shadow : 0px 0px 5px 1px #EBF6FF;
+            -webkit-box-shadow: 0px 0px 10px 1px #EBF6FF;
+             box-shadow: 0px 0px 5px 1px  #EBF6FF;
+             border: 2px solid rgb(97, 109, 104);
+          }          
+           textarea::-webkit-scrollbar-thumb  {
+             background-color: #0bbFF9;
+           }
+           #btnDividir{
+            background-color:  rgb(31, 29, 29);
+             color: #ffc107 ;
+             border-radius: 6px;
+             width:10%;
+             font-family:'Times New Roman', Times, serif;
+             padding: 5px;
+             font-size: 23px;
+             top:50%;
+             left:50%;
+             transform: translate(400%,-53%);
+           }
+           #btnDividir:hover{
+            background-color: #1f1c32;
+           }
+           #btnLimparTexto{
+            background-color:  rgb(31, 29, 29);
+             color: #ffc107 ;
+             border-radius: 6px;
+             width:10%;
+             font-family:'Times New Roman', Times, serif;
+             padding: 5px;
+             font-size: 23px;
+             top:50%;
+             left:50%;
+             transform: translate(500%,-205%);
+           }
+          #btnLimparTexto:hover{
+            background-color: #1f1c32;
+          } 
+           #mytab{
+               width: 50%;
+               margin-left: 25%;
+           }
+           
+           button{
+            background-color:  rgb(31, 29, 29);
+              color: white;
+              padding: 6px;
+              border-radius: 8px;
+              font-family: Verdana, Geneva, Tahoma, sans-serif;
+              width: 100%;
+          }
+          button:hover{
+            background-color: #1f1c32;
+          }
+          
+.footer{
+  background-color:  rgb(15, 15, 19);
+  color:white;
+    width: 100vw;
+    padding: 60px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+.footer-spam{
+  color: #ffc107 ;
+}
+@media(max-width: 930px) {
+
+#dividir{
+min-width: 360px; 
+background-color: rgba(239, 239, 247, 0.705);
+top: 50%;
+left: 50%;
+transform: translate(-80%,0%);
+width: 0%;
+border-radius: 8px;
+}
+#btnDividir{
+background-color: #ffc107;
+color: black;
+width: 25%;
+padding: 2px;
+transform: translate(100%,-50%);
+}
+#btnLimparTexto{
+background-color: #ffc107;
+color: black;
+width: 25%;
+padding: 2px;
+transform: translate(200%,-210%);
+}
+.navbar-brand{
+  margin-top: -8px;
+}
+.footer-spam{
+color: #ffc107;
+
+}
+}
+
+  </style>
+  <body>
+    
+    <section class="contanier">
+      <section class="parte-1">
+        <nav class="navbar navbar-expand-sm ">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">inicio</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Sobre</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Referencias</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="https://www.bible.com/pt/bible/1608/GEN.1.ARA">Bíblia Sagrada</a></li>
+                      <li><a class="dropdown-item" href="https://www.pensador.com/textos/">Texto Pensador</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+     </section>
+     <br><br>
+     <section class="parte-2">
+        <div class="titulo">
+            <br><br><br><spam class="divtext">divtext</spam><spam class="subtitulo">.com</spam></spam></br></br></br>
+          </div>
+     </section>
+     <section class="parte-3">
+        <div class="row">
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Passo <spam class="bolinha">1</spam></h4>
+                  <li><h5> Copie e cole o seu texto para a área em baixo,utilizando as teclas <u style="color:blue"> CTRL + C e CTRL + V</u>, ou começe a escrever.</h5></li>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Passo <spam class="bolinha">2</spam></h4>
+                   <li><h5><u style="color: blue;">Clique</u> no botao abaixo para dividir o texto.</h5></li>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+     </section>
+     <section class="parte-4">
+    <textarea id = "dividir" placeholder="Digite ou cole  o texto.."></textarea>
+    <br><button id="btnDividir" onclick="dividirTexto()">Dividir</button></br>
+    <br><button id="btnLimparTexto" onclick="limparTexto()">Limpar</button></br>
+    </section>
+     <section class="parte-5">
+        <table class="table table-dark table-hover" id="mytab">
+            <thead class="table-dark" id="thead">
+                <th id="center">#</th>
+                <th id="textoDividido" style="text-align: center;">Texto Dividido</th>
+                 <th id="thBotao" style="text-align: center;">Copiar</th>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+          </table>
+     </section>
+     <div class="footer">
+      <p class="p-footer">Programador:Fernando Henrique Borba<br>
+        <a href="https://github.com/fernandohbb"><spam class="footer-spam">Github: fernandohbb:</spam></a></p>
+      </div>
+     </section>
+     
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+   <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+<script> 
+
+    function limparTexto(){
+    var limpar = document.querySelector("#dividir")
+    limpar.value = '';
+    location.reload();
+
+    }
+
+    function copiarTextoDividido (idDoTd){
+       var td = document.querySelector("#" + idDoTd );
+       console.log(idDoTd,td);
+       navigator.clipboard.writeText(td.innerText);
+    }
+   
+    function dividirTexto(){
+    var slides = [];
+    var textoUsuario = document.querySelector('#dividir').value
+    while (textoUsuario.trim().length > 0) {
+    var textoSlide = textoUsuario.substring(0,385);
+    var ultimaLinha = textoSlide.substring(310);     
+    var indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' 1') ;
+
+    if(ultimaLinha.indexOf(' 1')=== -1){
+      indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' 2');
+    }
+    if(ultimaLinha.indexOf(' 1')=== -1 && ultimaLinha.indexOf(' 2')=== -1){
+      indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' 3') ;
+    }
+     if(ultimaLinha.indexOf(' 1')=== -1 && ultimaLinha.indexOf(' 2')=== -1 && ultimaLinha.indexOf(' 3')=== -1  ){
+      indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' 4') ;
+    }
+    if(ultimaLinha.indexOf(' 1')=== -1 && ultimaLinha.indexOf(' 2')=== -1 && ultimaLinha.indexOf(' 3')=== -1 && ultimaLinha.indexOf(' 4')=== -1 ){
+      indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' 5') ;
+    }
+    if(ultimaLinha.indexOf(' 1')=== -1 && ultimaLinha.indexOf(' 2')=== -1 && ultimaLinha.indexOf(' 3')=== -1 && ultimaLinha.indexOf(' 4')=== -1 && ultimaLinha.indexOf(' 5')=== -1){
+      indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' 6') ;
+    }
+    if(ultimaLinha.indexOf(' 1')=== -1 && ultimaLinha.indexOf(' 2')=== -1 && ultimaLinha.indexOf(' 3')=== -1 && ultimaLinha.indexOf(' 4')=== -1 && ultimaLinha.indexOf(' 5')=== -1 &&  ultimaLinha.indexOf(' 6')=== -1  ){
+      indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' 7') ;
+    }
+    if(ultimaLinha.indexOf(' 1')=== -1 && ultimaLinha.indexOf(' 2')=== -1 && ultimaLinha.indexOf(' 3')=== -1 && ultimaLinha.indexOf(' 4')=== -1 && ultimaLinha.indexOf(' 5')=== -1 &&  ultimaLinha.indexOf(' 6')=== -1 && ultimaLinha.indexOf(' 7')=== -1 ){
+      indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' 8') ;
+    }
+    if(ultimaLinha.indexOf(' 1')=== -1 && ultimaLinha.indexOf(' 2')=== -1 && ultimaLinha.indexOf(' 3')=== -1 && ultimaLinha.indexOf(' 4')=== -1 && ultimaLinha.indexOf(' 5')=== -1 &&  ultimaLinha.indexOf(' 6')=== -1 && ultimaLinha.indexOf(' 7')=== -1 && ultimaLinha.indexOf(' 8')=== -1 ){
+      indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' 9') ;
+    }
+    if(ultimaLinha.indexOf(' 1')=== -1 && ultimaLinha.indexOf(' 2')=== -1 && ultimaLinha.indexOf(' 3')=== -1 && ultimaLinha.indexOf(' 4')=== -1 && ultimaLinha.indexOf(' 5')=== -1 &&  ultimaLinha.indexOf(' 6')=== -1 && ultimaLinha.indexOf(' 7')=== -1 && ultimaLinha.indexOf(' 8')=== -1 && ultimaLinha.indexOf(' 9')=== -1 ){
+      indicePontoTextoUsuario = 310 + ultimaLinha.indexOf('. ') ;
+    }          
+    if(ultimaLinha.indexOf('. ')===-1){
+      indicePontoTextoUsuario = 310 + ultimaLinha.indexOf('?') ;
+    }
+    if(ultimaLinha.indexOf('. ')=== -1 && ultimaLinha.indexOf('?')=== -1){
+      indicePontoTextoUsuario = 310 + ultimaLinha.indexOf('!') ;
+    }
+    if(ultimaLinha.indexOf('. ')=== -1 && ultimaLinha.indexOf('?')=== -1 && ultimaLinha.indexOf('!')=== -1){
+      indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(':') ;
+    }
+    if(ultimaLinha.indexOf('. ')=== -1 && ultimaLinha.indexOf('?')=== -1 && ultimaLinha.indexOf('!')=== -1 && ultimaLinha.indexOf(':')=== -1){
+       indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(';') ;
+    }
+    if(ultimaLinha.indexOf('. ')=== -1 && ultimaLinha.indexOf('?')=== -1 && ultimaLinha.indexOf('!')=== -1 && ultimaLinha.indexOf(':')=== -1 && ultimaLinha.indexOf(';')=== -1){
+      indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(',');
+    }
+    if(ultimaLinha.indexOf('. ')=== -1 && ultimaLinha.indexOf('?')=== -1 && ultimaLinha.indexOf('!')=== -1 && ultimaLinha.indexOf(':')=== -1 && ultimaLinha.indexOf(';')=== -1 && ultimaLinha.indexOf(',')=== -1 ){
+      indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' ');
+    }    
+
+    console.log({ultimaLinha})
+    textoSlide = textoUsuario.substring(0,indicePontoTextoUsuario +1);
+    textoUsuario = textoUsuario.substring(indicePontoTextoUsuario +1);
+    slides.push(textoSlide.trim());
+    }
+    slides.forEach(texto => console.log(texto));
+    //slides.forEach(texto => document.write(texto + '<br><br><hr>' ));
+    //Esse é igual o de cima;
+
+    for(let i = 0; i < slides.length; i++){
+        var texto = slides[i];
+
+        var tbody = document.querySelector("#tbody")
+        var tr =  document.createElement("tr");
+        tr = tbody.insertRow();
+
+    
+        var tdQnt = tr.insertCell();
+        var tdTexto = tr.insertCell();
+        var tdBotaoCopiar = tr.insertCell();
+
+        tdQnt.innerHTML = i + 1
+        tdTexto.id = "tdDividido" + (i +1);
+        var btn = document.createElement("button");
+   btn.onclick = function (){ copiarTextoDividido("tdDividido" + (i + 1))};
+   btn.innerText = "copiar";
+    tdBotaoCopiar.appendChild(btn);
+   tdTexto.innerHTML = texto;
+
+    }
+   //tdBotaoCopiar.innerHTML =  "<button id=\"btnCopiarTexto\" onClick=\"copiarTextoDividido()\">Copiar</button>";
+  
+   
+
+    //console.log(textoSlide)
+   }
+   dividirTexto();            
+
+</script>       
+  </body>
+</html>
