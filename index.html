@@ -28,7 +28,6 @@
     .parte-1{
       background-color:  #111827;
       padding: 0px;
-
     }
     .parte-1 a{
       color:white;
@@ -41,7 +40,6 @@
     .dropdown-menu{
       background-color: #111827;
     }
-  
     .dropdown-item:hover{
       background-color:  #111827;
       color:#3466f6;
@@ -55,6 +53,7 @@
     .navbar-brand{
       color: black;
       padding: 0px;
+      background-color: #3466f6;
       background-image: linear-gradient(to bottom right, #3466f6, #51659b); 
       border-radius: 7px;
       border: solid yellow 1px;
@@ -118,9 +117,7 @@
              -webkit-box-shadow: 0px 0px 10px 1px #EBF6FF;
              box-shadow: 0px 0px 5px 1px  #EBF6FF;
              border: 1px solid #3466f6;
-           }
-           
-         
+           }    
            #btnDividir{
             background-color:  #111827;
              color:white;
@@ -154,8 +151,7 @@
            #mytab{
                width: 50%;
                margin-left: 25%;
-           }
-           
+           }        
            button{
             background-color:   #111827;
               color: white;
@@ -169,8 +165,7 @@
           }
           .link{
             color:#ffc107;
-          }
-          
+          }     
 .footer{
    background-color:   #111827;
    color:white;
@@ -182,12 +177,12 @@
   color: #ffc107 ;
 }
 @media(max-width: 1200px) {
-
 #dividir{
 min-width: 360px; 
 background-color: rgba(239, 239, 247, 0.705);
 top: 50%;
 left: 50%;
+transform: translate(-60%,0%);
 transform: translate(-90%,0%);
 width: 0%;
 border-radius: 8px;
@@ -210,7 +205,6 @@ transform: translate(200%,-210%);
   margin-top: -8px;
 }
 }
-
   </style>
   <body>
     <section class="contanier">
@@ -218,6 +212,8 @@ transform: translate(200%,-210%);
         <div class="form-check form-switch form-check-reverse">
           <input class="form-check-input light-mode " type="checkbox" onclick="checkBox()">
           <label class="form-check-label" for="flexSwitchCheckReverse"></label>
+          <div class="titulo-barra"></div>
+        </div>
         <nav class="navbar navbar-expand-sm ">
           <h1 class="titulo">divtext</h1>
             <div class="container-fluid">
@@ -278,32 +274,26 @@ transform: translate(200%,-210%);
         <a href="https://github.com/fernandohbb"><spam class="footer-spam">Github: fernandohbb:</spam></a></p>
       </div>
      </section>
-     
 
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
    <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-
 <script> 
 function checkBox() {
    var element = document.body;
    element.classList.toggle("dark-mode");
 }
-
     function limparTexto(){
     var limpar = document.querySelector("#dividir")
     limpar.value = '';
     location.reload();
-
     }
-
     function copiarTextoDividido (idDoTd){
        var td = document.querySelector("#" + idDoTd );
        console.log(idDoTd,td);
        navigator.clipboard.writeText(td.innerText);
     }
-   
     function dividirTexto(){
     var slides = [];
     var textoUsuario = document.querySelector('#dividir').value
@@ -311,7 +301,6 @@ function checkBox() {
     var textoSlide = textoUsuario.substring(0,385);
     var ultimaLinha = textoSlide.substring(310);     
     var indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' 1') ;
-
     if(ultimaLinha.indexOf(' 1')=== -1){
       indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' 2');
     }
@@ -357,7 +346,6 @@ function checkBox() {
     if(ultimaLinha.indexOf('. ')=== -1 && ultimaLinha.indexOf('?')=== -1 && ultimaLinha.indexOf('!')=== -1 && ultimaLinha.indexOf(':')=== -1 && ultimaLinha.indexOf(';')=== -1 && ultimaLinha.indexOf(',')=== -1 ){
       indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' ');
     }    
-
     console.log({ultimaLinha})
     textoSlide = textoUsuario.substring(0,indicePontoTextoUsuario +1);
     textoUsuario = textoUsuario.substring(indicePontoTextoUsuario +1);
@@ -366,19 +354,15 @@ function checkBox() {
     slides.forEach(texto => console.log(texto));
     //slides.forEach(texto => document.write(texto + '<br><br><hr>' ));
     //Esse é igual o de cima;
-
     for(let i = 0; i < slides.length; i++){
         var texto = slides[i];
-
         var tbody = document.querySelector("#tbody")
         var tr =  document.createElement("tr");
         tr = tbody.insertRow();
-
     
         var tdQnt = tr.insertCell();
         var tdTexto = tr.insertCell();
         var tdBotaoCopiar = tr.insertCell();
-
         tdQnt.innerHTML = i + 1
         tdTexto.id = "tdDividido" + (i +1);
         var btn = document.createElement("button");
@@ -386,16 +370,11 @@ function checkBox() {
    btn.innerText = "copiar";
     tdBotaoCopiar.appendChild(btn);
    tdTexto.innerHTML = texto;
-
     }
    //tdBotaoCopiar.innerHTML =  "<button id=\"btnCopiarTexto\" onClick=\"copiarTextoDividido()\">Copiar</button>";
-  
-   
-
     //console.log(textoSlide)
    }
    dividirTexto();            
-
 </script>       
   </body>
 </html>
