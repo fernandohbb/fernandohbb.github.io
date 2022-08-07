@@ -1,0 +1,196 @@
+body{
+    background-color: white;
+  }
+  .titulo{
+    color: white;
+    padding-left: 5px;
+  }
+  .titulo-barra{
+    background-color: #ffc107;
+    padding: 1px;
+    width: 33%;
+  }
+  .dark-mode {
+background-color: black;
+color: white;
+}
+  .parte-1{
+    background-color:  #111827;
+    padding: 0px;
+  }
+  .parte-1 a{
+    color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+ 
+  .dropdown-item{
+  color:white;
+  }
+  .dropdown-menu{
+    background-color: #111827;
+  }
+  .dropdown-item:hover{
+    background-color:  #111827;
+    color:#3466f6;
+  }
+  .nav-link:hover{
+    color:#3466f6;
+  }
+  .nav-link dropdown-toggle{
+    color:white;
+  }
+  .navbar-brand{
+    color: black;
+    padding: 0px;
+    background-color: #3466f6;
+    background-image: linear-gradient(to bottom right, #3466f6, #51659b); 
+    border-radius: 7px;
+    border: solid yellow 1px;
+  }
+.navbar-brand:hover {
+padding-right: 10px;
+}
+.navbar-brand:hover:after {
+opacity: 1;
+right: 0;
+}
+         .card{
+           padding: 0px;
+           background-color:  #111827;
+           list-style-type: none;
+           color:white;
+           width: 75%;
+           margin-top: -50px;
+         }
+         .card-title{
+          color:  white;
+         }
+         .bolinha{
+           background-color:  #3466f6;
+           padding: 3px;
+           border-radius: 100%;
+         }
+         h5{
+             font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+             font-size: 15px;
+         }
+         .parte-3{
+           padding: 70px;
+         }
+         .parte-4{
+           margin-top: -80px;
+           margin-bottom: -60px;
+         }
+         .row{
+             align-items: center;
+             flex-direction: column;
+         }
+         textarea{
+           background-color: white;
+           color:black;
+           width: 650px;
+           height: 210px;
+           top: 50%;
+           border-radius: 10px;
+           margin: 15px;
+           margin-top: 30px;
+           margin-left: 320px;
+           display:flex;
+           box-shadow: 0 0 1px  rgb(31, 29, 29);   
+           border: none;      
+           outline: none;
+           resize: none;                  
+         }
+         textarea:hover{
+           -moz-box-shadow : 0px 0px 10px 1px #EBF6FF;
+           -webkit-box-shadow: 0px 0px 10px 1px #EBF6FF;
+           box-shadow: 0px 0px 5px 1px  #EBF6FF;
+           border: 1px solid #3466f6;
+         }    
+         #btnDividir{
+          background-color:  #111827;
+           color:white;
+           border-radius: 8px;
+           width:10%;
+           font-family:'Times New Roman', Times, serif;
+           padding: 0px;
+           font-size: 23px;
+           top:50%;
+           left:50%;
+           transform: translate(410%,-79%);
+         }
+         #btnDividir:hover{
+          background-color:#3466f6;
+         }
+         #btnLimparTexto{
+          background-color: #111827;
+           color:white;
+           border-radius: 8px;
+           width:10%;
+           font-family:'Times New Roman', Times, serif;
+           padding: 0px;
+           font-size: 23px;
+           top:50%;
+           left:50%;
+           transform: translate(510%,-240%);
+         }
+        #btnLimparTexto:hover{
+          background-color: #3466f6;
+        } 
+         #mytab{
+             width: 50%;
+             margin-left: 25%;
+         }        
+         button{
+          background-color:   #111827;
+            color: white;
+            padding: 0px;
+            border-radius: 8px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            width: 100%;
+        }
+        button:hover{
+          background-color: #3466f6;
+        }
+        .link{
+          color:#ffc107;
+        }     
+.footer{
+ background-color:   #111827;
+ color:white;
+  width: 100vw;
+  padding-bottom: 40px;
+  text-align: center;
+}
+.footer-spam{
+color: #ffc107 ;
+}
+@media(max-width: 1200px) {
+#dividir{
+min-width: 360px; 
+background-color: rgba(239, 239, 247, 0.705);
+top: 50%;
+left: 50%;
+transform: translate(-60%,0%);
+transform: translate(-90%,0%);
+width: 0%;
+border-radius: 8px;
+}
+#btnDividir{
+background-color: #ffc107;
+color: black;
+width: 25%;
+padding: 2px;
+transform: translate(100%,-50%);
+}
+#btnLimparTexto{
+background-color: #ffc107;
+color: black;
+width: 25%;
+padding: 2px;
+transform: translate(200%,-210%);
+}
+.navbar-brand{
+margin-top: -8px;
+}
+}
