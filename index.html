@@ -5,207 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-compatible" content="IE=edge">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="style.css" />
+    <script src="javascript.js"></script>
     <!-- CSS only -->
+    <link rel="stylesheet" href="style.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   </head>
-  <style>
-    body{
-      background-color: white;
-    }
-    .titulo{
-      color: white;
-      padding-left: 5px;
-    }
-    .titulo-barra{
-      background-color: #ffc107;
-      padding: 1px;
-      width: 33%;
-    }
-    .dark-mode {
-  background-color: black;
-  color: white;
-}
-    .parte-1{
-      background-color:  #111827;
-      padding: 0px;
-    }
-    .parte-1 a{
-      color:white;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-   
-    .dropdown-item{
-    color:white;
-    }
-    .dropdown-menu{
-      background-color: #111827;
-    }
-    .dropdown-item:hover{
-      background-color:  #111827;
-      color:#3466f6;
-    }
-    .nav-link:hover{
-      color:#3466f6;
-    }
-    .nav-link dropdown-toggle{
-      color:white;
-    }
-    .navbar-brand{
-      color: black;
-      padding: 0px;
-      background-color: #3466f6;
-      background-image: linear-gradient(to bottom right, #3466f6, #51659b); 
-      border-radius: 7px;
-      border: solid yellow 1px;
-    }
-.navbar-brand:hover {
-  padding-right: 10px;
-}
-.navbar-brand:hover:after {
-  opacity: 1;
-  right: 0;
-}
-           .card{
-             padding: 0px;
-             background-color:  #111827;
-             list-style-type: none;
-             color:white;
-             width: 75%;
-             margin-top: -50px;
-           }
-           .card-title{
-            color:  white;
-           }
-           .bolinha{
-             background-color:  #3466f6;
-             padding: 3px;
-             border-radius: 100%;
-           }
-           h5{
-               font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-               font-size: 15px;
-           }
-           .parte-3{
-             padding: 70px;
-           }
-           .parte-4{
-             margin-top: -80px;
-             margin-bottom: -60px;
-           }
-           .row{
-               align-items: center;
-               flex-direction: column;
-           }
-           textarea{
-             background-color: white;
-             color:black;
-             width: 650px;
-             height: 210px;
-             top: 50%;
-             border-radius: 10px;
-             margin: 15px;
-             margin-top: 30px;
-             margin-left: 320px;
-             display:flex;
-             box-shadow: 0 0 1px  rgb(31, 29, 29);   
-             border: none;      
-             outline: none;
-             resize: none;                  
-           }
-           textarea:hover{
-             -moz-box-shadow : 0px 0px 10px 1px #EBF6FF;
-             -webkit-box-shadow: 0px 0px 10px 1px #EBF6FF;
-             box-shadow: 0px 0px 5px 1px  #EBF6FF;
-             border: 1px solid #3466f6;
-           }    
-           #btnDividir{
-            background-color:  #111827;
-             color:white;
-             border-radius: 8px;
-             width:10%;
-             font-family:'Times New Roman', Times, serif;
-             padding: 0px;
-             font-size: 23px;
-             top:50%;
-             left:50%;
-             transform: translate(410%,-79%);
-           }
-           #btnDividir:hover{
-            background-color:#3466f6;
-           }
-           #btnLimparTexto{
-            background-color: #111827;
-             color:white;
-             border-radius: 8px;
-             width:10%;
-             font-family:'Times New Roman', Times, serif;
-             padding: 0px;
-             font-size: 23px;
-             top:50%;
-             left:50%;
-             transform: translate(510%,-240%);
-           }
-          #btnLimparTexto:hover{
-            background-color: #3466f6;
-          } 
-           #mytab{
-               width: 50%;
-               margin-left: 25%;
-           }        
-           button{
-            background-color:   #111827;
-              color: white;
-              padding: 0px;
-              border-radius: 8px;
-              font-family: Verdana, Geneva, Tahoma, sans-serif;
-              width: 100%;
-          }
-          button:hover{
-            background-color: #3466f6;
-          }
-          .link{
-            color:#ffc107;
-          }     
-.footer{
-   background-color:   #111827;
-   color:white;
-    width: 100vw;
-    padding-bottom: 40px;
-    text-align: center;
-}
-.footer-spam{
-  color: #ffc107 ;
-}
-@media(max-width: 1200px) {
-#dividir{
-min-width: 360px; 
-background-color: rgba(239, 239, 247, 0.705);
-top: 50%;
-left: 50%;
-transform: translate(-60%,0%);
-transform: translate(-90%,0%);
-width: 0%;
-border-radius: 8px;
-}
-#btnDividir{
-background-color: #ffc107;
-color: black;
-width: 25%;
-padding: 2px;
-transform: translate(100%,-50%);
-}
-#btnLimparTexto{
-background-color: #ffc107;
-color: black;
-width: 25%;
-padding: 2px;
-transform: translate(200%,-210%);
-}
-.navbar-brand{
-  margin-top: -8px;
-}
-}
-  </style>
   <body>
     <section class="contanier">
       <section class="parte-1">
@@ -215,7 +20,7 @@ transform: translate(200%,-210%);
           <div class="titulo-barra"></div>
         </div>
         <nav class="navbar navbar-expand-sm ">
-          <h1 class="titulo">divtext</h1>
+          <h1 class="titulo"><spam class="titulo-spam">d</spam>iv<spam class="titulo-spam-2">t</spam>ext</h1>
             <div class="container-fluid">
               <a class="navbar-brand" href="#">inicio</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -255,9 +60,9 @@ transform: translate(200%,-210%);
      </section>
      <section class="parte-4">
     <textarea id = "dividir" placeholder="Digite ou cole  o texto.."></textarea>
+    </section>
     <br><button id="btnDividir" onclick="dividirTexto()">Dividir</button></br>
     <br><button id="btnLimparTexto" onclick="limparTexto()">Limpar</button></br>
-    </section>
      <section class="parte-6">
         <table class="table table-dark table-hover" id="mytab">
             <thead class="table-dark" id="thead">
@@ -274,107 +79,6 @@ transform: translate(200%,-210%);
         <a href="https://github.com/fernandohbb"><spam class="footer-spam">Github: fernandohbb:</spam></a></p>
       </div>
      </section>
-
-    <!-- JavaScript (Opcional) -->
-    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-   <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-<script> 
-function checkBox() {
-   var element = document.body;
-   element.classList.toggle("dark-mode");
-}
-    function limparTexto(){
-    var limpar = document.querySelector("#dividir")
-    limpar.value = '';
-    location.reload();
-    }
-    function copiarTextoDividido (idDoTd){
-       var td = document.querySelector("#" + idDoTd );
-       console.log(idDoTd,td);
-       navigator.clipboard.writeText(td.innerText);
-    }
-    function dividirTexto(){
-    var slides = [];
-    var textoUsuario = document.querySelector('#dividir').value
-    while (textoUsuario.trim().length > 0) {
-    var textoSlide = textoUsuario.substring(0,385);
-    var ultimaLinha = textoSlide.substring(310);     
-    var indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' 1') ;
-    if(ultimaLinha.indexOf(' 1')=== -1){
-      indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' 2');
-    }
-    if(ultimaLinha.indexOf(' 1')=== -1 && ultimaLinha.indexOf(' 2')=== -1){
-      indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' 3') ;
-    }
-     if(ultimaLinha.indexOf(' 1')=== -1 && ultimaLinha.indexOf(' 2')=== -1 && ultimaLinha.indexOf(' 3')=== -1  ){
-      indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' 4') ;
-    }
-    if(ultimaLinha.indexOf(' 1')=== -1 && ultimaLinha.indexOf(' 2')=== -1 && ultimaLinha.indexOf(' 3')=== -1 && ultimaLinha.indexOf(' 4')=== -1 ){
-      indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' 5') ;
-    }
-    if(ultimaLinha.indexOf(' 1')=== -1 && ultimaLinha.indexOf(' 2')=== -1 && ultimaLinha.indexOf(' 3')=== -1 && ultimaLinha.indexOf(' 4')=== -1 && ultimaLinha.indexOf(' 5')=== -1){
-      indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' 6') ;
-    }
-    if(ultimaLinha.indexOf(' 1')=== -1 && ultimaLinha.indexOf(' 2')=== -1 && ultimaLinha.indexOf(' 3')=== -1 && ultimaLinha.indexOf(' 4')=== -1 && ultimaLinha.indexOf(' 5')=== -1 &&  ultimaLinha.indexOf(' 6')=== -1  ){
-      indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' 7') ;
-    }
-    if(ultimaLinha.indexOf(' 1')=== -1 && ultimaLinha.indexOf(' 2')=== -1 && ultimaLinha.indexOf(' 3')=== -1 && ultimaLinha.indexOf(' 4')=== -1 && ultimaLinha.indexOf(' 5')=== -1 &&  ultimaLinha.indexOf(' 6')=== -1 && ultimaLinha.indexOf(' 7')=== -1 ){
-      indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' 8') ;
-    }
-    if(ultimaLinha.indexOf(' 1')=== -1 && ultimaLinha.indexOf(' 2')=== -1 && ultimaLinha.indexOf(' 3')=== -1 && ultimaLinha.indexOf(' 4')=== -1 && ultimaLinha.indexOf(' 5')=== -1 &&  ultimaLinha.indexOf(' 6')=== -1 && ultimaLinha.indexOf(' 7')=== -1 && ultimaLinha.indexOf(' 8')=== -1 ){
-      indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' 9') ;
-    }
-    if(ultimaLinha.indexOf(' 1')=== -1 && ultimaLinha.indexOf(' 2')=== -1 && ultimaLinha.indexOf(' 3')=== -1 && ultimaLinha.indexOf(' 4')=== -1 && ultimaLinha.indexOf(' 5')=== -1 &&  ultimaLinha.indexOf(' 6')=== -1 && ultimaLinha.indexOf(' 7')=== -1 && ultimaLinha.indexOf(' 8')=== -1 && ultimaLinha.indexOf(' 9')=== -1 ){
-      indicePontoTextoUsuario = 310 + ultimaLinha.indexOf('. ') ;
-    }          
-    if(ultimaLinha.indexOf('. ')===-1){
-      indicePontoTextoUsuario = 310 + ultimaLinha.indexOf('?') ;
-    }
-    if(ultimaLinha.indexOf('. ')=== -1 && ultimaLinha.indexOf('?')=== -1){
-      indicePontoTextoUsuario = 310 + ultimaLinha.indexOf('!') ;
-    }
-    if(ultimaLinha.indexOf('. ')=== -1 && ultimaLinha.indexOf('?')=== -1 && ultimaLinha.indexOf('!')=== -1){
-      indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(':') ;
-    }
-    if(ultimaLinha.indexOf('. ')=== -1 && ultimaLinha.indexOf('?')=== -1 && ultimaLinha.indexOf('!')=== -1 && ultimaLinha.indexOf(':')=== -1){
-       indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(';') ;
-    }
-    if(ultimaLinha.indexOf('. ')=== -1 && ultimaLinha.indexOf('?')=== -1 && ultimaLinha.indexOf('!')=== -1 && ultimaLinha.indexOf(':')=== -1 && ultimaLinha.indexOf(';')=== -1){
-      indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(',');
-    }
-    if(ultimaLinha.indexOf('. ')=== -1 && ultimaLinha.indexOf('?')=== -1 && ultimaLinha.indexOf('!')=== -1 && ultimaLinha.indexOf(':')=== -1 && ultimaLinha.indexOf(';')=== -1 && ultimaLinha.indexOf(',')=== -1 ){
-      indicePontoTextoUsuario = 310 + ultimaLinha.indexOf(' ');
-    }    
-    console.log({ultimaLinha})
-    textoSlide = textoUsuario.substring(0,indicePontoTextoUsuario +1);
-    textoUsuario = textoUsuario.substring(indicePontoTextoUsuario +1);
-    slides.push(textoSlide.trim());
-    }
-    slides.forEach(texto => console.log(texto));
-    //slides.forEach(texto => document.write(texto + '<br><br><hr>' ));
-    //Esse é igual o de cima;
-    for(let i = 0; i < slides.length; i++){
-        var texto = slides[i];
-        var tbody = document.querySelector("#tbody")
-        var tr =  document.createElement("tr");
-        tr = tbody.insertRow();
-    
-        var tdQnt = tr.insertCell();
-        var tdTexto = tr.insertCell();
-        var tdBotaoCopiar = tr.insertCell();
-        tdQnt.innerHTML = i + 1
-        tdTexto.id = "tdDividido" + (i +1);
-        var btn = document.createElement("button");
-   btn.onclick = function (){ copiarTextoDividido("tdDividido" + (i + 1))};
-   btn.innerText = "copiar";
-    tdBotaoCopiar.appendChild(btn);
-   tdTexto.innerHTML = texto;
-    }
-   //tdBotaoCopiar.innerHTML =  "<button id=\"btnCopiarTexto\" onClick=\"copiarTextoDividido()\">Copiar</button>";
-    //console.log(textoSlide)
-   }
-   dividirTexto();            
-</script>       
   </body>
 </html>
